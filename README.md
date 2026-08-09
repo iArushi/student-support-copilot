@@ -108,15 +108,12 @@ student-record retrieval remain deterministic.
 
 ## PM assignment package
 
+- [`docs/PRD.md`](docs/PRD.md) — requirements, journeys, acceptance criteria, metrics, and roadmap
 - [`docs/PRODUCT_BRIEF.md`](docs/PRODUCT_BRIEF.md) — problem, persona, JTBD, scope, and policy
-- [`docs/INFORMATION_ARCHITECTURE.md`](docs/INFORMATION_ARCHITECTURE.md) — student-facing hierarchy, content model, taxonomy, and states
-- [`docs/USER_FLOWS_AND_ACCEPTANCE.md`](docs/USER_FLOWS_AND_ACCEPTANCE.md) — five journeys and acceptance criteria
-- [`docs/TECHNICAL_STRATEGY_AND_METRICS.md`](docs/TECHNICAL_STRATEGY_AND_METRICS.md) — architecture, risks, and metrics
-- [`docs/EVALUATION_REPORT.md`](docs/EVALUATION_REPORT.md) — 34-case result and demo evidence
-- [`docs/SUBMISSION_DECK.md`](docs/SUBMISSION_DECK.md) — eight-slide company narrative
+- [`docs/TECH_STACK_AND_WORKING.md`](docs/TECH_STACK_AND_WORKING.md) — technology choices and end-to-end code flow
 - [`scripts/evaluation.mts`](scripts/evaluation.mts) — reproducible acceptance evaluation
 
-The slide deck explicitly separates implemented prototype behavior, assumptions, and production recommendations.
+The documents separate implemented prototype behavior, assumptions, and production recommendations.
 
 ## Prototype limitations
 
