@@ -1,0 +1,144 @@
+{
+  "records": [
+    {
+      "studentId": "stu-priya",
+      "overallGpa": 3.55,
+      "standing": "Good academic standing",
+      "courses": [
+        {
+          "moduleCode": "SSC-G7-MATH-NUM",
+          "moduleTitle": "Rational Numbers & Proportional Reasoning",
+          "progressPercent": 100,
+          "currentGrade": "A",
+          "scorePercent": 94,
+          "status": "completed",
+          "lastActivity": "2026-07-28",
+          "lmsProgressNote": "Mirrors high-completion Grade 7 Math demo students (~100%)."
+        },
+        {
+          "moduleCode": "SSC-G7-MATH-ALG",
+          "moduleTitle": "Expressions & Equations",
+          "progressPercent": 72,
+          "currentGrade": "B+",
+          "scorePercent": 87,
+          "status": "in_progress",
+          "lastActivity": "2026-08-06"
+        },
+        {
+          "moduleCode": "SSC-G7-MATH-GEO",
+          "moduleTitle": "Geometry — Angles, Triangles & Scale Drawings",
+          "progressPercent": 45,
+          "currentGrade": "B",
+          "scorePercent": 82,
+          "status": "in_progress",
+          "lastActivity": "2026-08-05"
+        },
+        {
+          "moduleCode": "SSC-G7-MATH-STAT",
+          "moduleTitle": "Statistics & Probability",
+          "progressPercent": 30,
+          "currentGrade": "—",
+          "scorePercent": null,
+          "status": "in_progress",
+          "lastActivity": "2026-08-03"
+        },
+        {
+          "moduleCode": "SSC-G7-SCI-BIO",
+          "moduleTitle": "Living Systems & Cells",
+          "progressPercent": 60,
+          "currentGrade": "A-",
+          "scorePercent": 90,
+          "status": "in_progress",
+          "lastActivity": "2026-08-04"
+        }
+      ]
+    },
+    {
+      "studentId": "stu-arjun",
+      "overallGpa": 3.2,
+      "standing": "Good academic standing",
+      "courses": [
+        {
+          "moduleCode": "SSC-G7-MATH-NUM",
+          "moduleTitle": "Rational Numbers & Proportional Reasoning",
+          "progressPercent": 100,
+          "currentGrade": "A-",
+          "scorePercent": 91,
+          "status": "completed",
+          "lastActivity": "2026-07-25"
+        },
+        {
+          "moduleCode": "SSC-G7-MATH-ALG",
+          "moduleTitle": "Expressions & Equations",
+          "progressPercent": 55,
+          "currentGrade": "B-",
+          "scorePercent": 78,
+          "status": "in_progress",
+          "lastActivity": "2026-08-06",
+          "lmsProgressNote": "Aligned to mid-progress Grade 7 Math demo band (~55%)."
+        },
+        {
+          "moduleCode": "SSC-G7-MATH-GEO",
+          "moduleTitle": "Geometry — Angles, Triangles & Scale Drawings",
+          "progressPercent": 20,
+          "currentGrade": "—",
+          "scorePercent": null,
+          "status": "in_progress",
+          "lastActivity": "2026-08-01"
+        },
+        {
+          "moduleCode": "SSC-G7-MATH-STAT",
+          "moduleTitle": "Statistics & Probability",
+          "progressPercent": 10,
+          "currentGrade": "—",
+          "scorePercent": null,
+          "status": "in_progress",
+          "lastActivity": "2026-07-30"
+        }
+      ]
+    },
+    {
+      "studentId": "stu-neha",
+      "overallGpa": 3.4,
+      "standing": "Good academic standing",
+      "courses": [
+        {
+          "moduleCode": "SSC-G7-SCI-BIO",
+          "moduleTitle": "Living Systems & Cells",
+          "progressPercent": 80,
+          "currentGrade": "A-",
+          "scorePercent": 89,
+          "status": "in_progress",
+          "lastActivity": "2026-08-07"
+        },
+        {
+          "moduleCode": "SSC-G7-SCI-CHEM",
+          "moduleTitle": "Matter & Chemical Changes",
+          "progressPercent": 50,
+          "currentGrade": "B+",
+          "scorePercent": 85,
+          "status": "in_progress",
+          "lastActivity": "2026-08-05"
+        },
+        {
+          "moduleCode": "SSC-G7-SCI-PHY",
+          "moduleTitle": "Forces, Motion & Energy",
+          "progressPercent": 25,
+          "currentGrade": "B",
+          "scorePercent": 80,
+          "status": "in_progress",
+          "lastActivity": "2026-08-02"
+        },
+        {
+          "moduleCode": "SSC-G7-MATH-STAT",
+          "moduleTitle": "Statistics & Probability",
+          "progressPercent": 40,
+          "currentGrade": "B",
+          "scorePercent": 81,
+          "status": "in_progress",
+          "lastActivity": "2026-08-04"
+        }
+      ]
+    }
+  ]
+}

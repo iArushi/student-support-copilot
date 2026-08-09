@@ -1,0 +1,66 @@
+{
+  "defaultDesk": {
+    "role": "Student Success Desk",
+    "name": "Campus Hub (demo school)",
+    "channel": "success@campus.edu or in-person 10:00–17:00 IST",
+    "whenToUse": "Use when the topic is unclear or no specialist is listed."
+  },
+  "routes": [
+    {
+      "id": "leave",
+      "topics": ["leave", "absence", "attendance", "sick leave", "medical leave", "time off"],
+      "role": "Academic Advisor",
+      "name": "Ms. Priya Nair",
+      "channel": "priya.nair@campus.edu · Book via Advising portal",
+      "notes": "Bring dates and reason. Medical leave may need a certificate."
+    },
+    {
+      "id": "grades",
+      "topics": ["grade dispute", "revaluation", "recheck", "score dispute", "wrong grade"],
+      "role": "Program Coordinator / Instructor",
+      "name": "instructor@campus.edu (demo LMS instructor)",
+      "channel": "Message instructor in the LMS · Office: Block B-214",
+      "notes": "Grade disputes must be raised within 7 days of result release. For score questions only, ask the copilot 'What are my grades?' first."
+    },
+    {
+      "id": "tech",
+      "topics": ["login", "password", "portal", "lms access", "technical", "wifi", "account locked", "otp", "keycloak"],
+      "role": "IT Support",
+      "name": "IT Helpdesk",
+      "channel": "it-help@campus.edu · Ext. 4400",
+      "notes": "Demo LMS uses Keycloak/OIDC. Reset password via IdP first; escalate if still locked."
+    },
+    {
+      "id": "career",
+      "topics": ["career", "internship", "placement", "resume", "cv", "job", "interview prep"],
+      "role": "Career Mentor",
+      "name": "Ms. Sara Khan",
+      "channel": "careers@campus.edu · Career Center appointments",
+      "notes": "Internship approvals go through Career Center, not your course instructor."
+    },
+    {
+      "id": "curriculum-change",
+      "topics": ["section change", "elective change", "track change", "drop course", "add course", "transfer", "cohort"],
+      "role": "Program Coordinator",
+      "name": "Mr. Arjun Mehta",
+      "channel": "arjun.mehta@campus.edu · Form: Academic Change Request",
+      "notes": "Section changes close 10 days after term start."
+    },
+    {
+      "id": "reteach",
+      "topics": ["reteach", "remediation", "practice assigned", "extra practice", "intervention"],
+      "role": "Course Instructor",
+      "name": "Your section instructor",
+      "channel": "LMS inbox / section queue",
+      "notes": "If Practice was assigned after diagnosis, open Student Work Queue — do not ask the chatbot to teach the concept."
+    },
+    {
+      "id": "wellbeing",
+      "topics": ["stress", "mental health", "counseling", "counsellor", "anxiety", "wellbeing"],
+      "role": "Student Counseling (human only)",
+      "name": "Counseling Center",
+      "channel": "counseling@campus.edu · Walk-in Room C-12",
+      "notes": "This chatbot does not provide counseling advice. Please contact the Counseling Center directly."
+    }
+  ]
+}

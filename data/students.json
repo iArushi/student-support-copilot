@@ -1,0 +1,44 @@
+{
+  "students": [
+    {
+      "id": "stu-priya",
+      "name": "Priya Patel",
+      "email": "priya.patel@school.edu",
+      "password": "student123",
+      "programId": "student-support-math-pathway",
+      "enrolledModuleCodes": [
+        "SSC-G7-MATH-NUM",
+        "SSC-G7-MATH-ALG",
+        "SSC-G7-MATH-GEO",
+        "SSC-G7-MATH-STAT",
+        "SSC-G7-SCI-BIO"
+      ]
+    },
+    {
+      "id": "stu-arjun",
+      "name": "Arjun Sharma",
+      "email": "arjun.sharma@school.edu",
+      "password": "student123",
+      "programId": "student-support-math-pathway",
+      "enrolledModuleCodes": [
+        "SSC-G7-MATH-NUM",
+        "SSC-G7-MATH-ALG",
+        "SSC-G7-MATH-GEO",
+        "SSC-G7-MATH-STAT"
+      ]
+    },
+    {
+      "id": "stu-neha",
+      "name": "Neha Desai",
+      "email": "neha.desai@school.edu",
+      "password": "student123",
+      "programId": "student-support-math-pathway",
+      "enrolledModuleCodes": [
+        "SSC-G7-SCI-BIO",
+        "SSC-G7-SCI-CHEM",
+        "SSC-G7-SCI-PHY",
+        "SSC-G7-MATH-STAT"
+      ]
+    }
+  ]
+}

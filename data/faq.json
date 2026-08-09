@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "id": "faq-office-hours",
+      "questions": ["office hours", "when can I meet", "faculty hours", "advisor hours", "instructor hours"],
+      "answer": "Instructors hold office hours shown on each LMS course page. Academic Advisors: Mon–Fri 14:00–16:00 IST in Block A Advising Lounge. Book longer sessions via the Advising portal.",
+      "source": "Student Handbook §4.2 · LMS course page"
+    },
+    {
+      "id": "faq-section-change",
+      "questions": ["change section", "switch section", "section change process", "change cohort"],
+      "answer": "Submit an Academic Change Request within 10 days of term start. Your Program Coordinator reviews section capacity and confirms by email within 3 working days.",
+      "source": "Student Handbook §3.1"
+    },
+    {
+      "id": "faq-grades-where",
+      "questions": ["where are my grades", "gradebook", "see scores", "view grades"],
+      "answer": "Open Grades in the LMS student menu, or ask this copilot “What are my grades?” for a snapshot. Attempt-level detail stays in the LMS gradebook.",
+      "source": "LMS learner gradebook"
+    },
+    {
+      "id": "faq-practice-queue",
+      "questions": ["practice assigned", "why extra work", "remediation", "work queue"],
+      "answer": "If your instructor assigned Practice after a check, it appears in your Student Work Queue with a plain-language reason. Complete it there — this chatbot will not teach the concept.",
+      "source": "LMS learner-practice workflow"
+    },
+    {
+      "id": "faq-id-card",
+      "questions": ["id card", "student card", "lost id", "replacement card"],
+      "answer": "Request a replacement at Campus Hub with a government ID. First replacement is free; further replacements may include a processing fee.",
+      "source": "Campus Services FAQ"
+    },
+    {
+      "id": "faq-library",
+      "questions": ["library", "borrowing books", "library hours"],
+      "answer": "Main library is open 08:00–21:00 IST on weekdays and 10:00–18:00 on Saturdays. Bring your student ID to borrow materials.",
+      "source": "Library Guide"
+    },
+    {
+      "id": "faq-fees",
+      "questions": ["fees", "tuition", "payment deadline", "installment"],
+      "answer": "Tuition deadlines are on the Finance portal. Installment plans must be approved before the first due date. Contact finance@campus.edu — not your mentor — for payment plans.",
+      "source": "Finance Office FAQ"
+    },
+    {
+      "id": "faq-contact-support",
+      "questions": ["contact support", "help desk", "who do I email", "general help"],
+      "answer": "Start with Student Success Desk (success@campus.edu). For LMS login issues use IT Support. For teaching content open the course — do not use this chat as a tutor.",
+      "source": "Student Success Desk"
+    }
+  ]
+}

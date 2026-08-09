@@ -1,0 +1,230 @@
+{
+  "program": {
+    "id": "student-support-math-pathway",
+    "name": "Campus Learning Demo School — Mathematics Pathway",
+    "duration": "Academic year",
+    "pathway": "Grade 3 CCSS Math foundations → Grade 7 core Math (+ optional Science)",
+    "summary": "Synthetic demo catalog covering Grade 3 Common Core Mathematics plus Grade 7 Mathematics and Science."
+  },
+  "semesters": [
+    {
+      "id": "g3-math",
+      "name": "Grade 3 Common Core Mathematics",
+      "theme": "Scope & sequence (CCSS) — from curriculum document seed",
+      "modules": [
+        {
+          "code": "SSC-G3-MATH-U01",
+          "title": "Unit 1: Numbers and Operations in Base Ten",
+          "credits": 4,
+          "description": "Place value to 1,000; rounding; addition and subtraction within 1,000; mental math strategies.",
+          "topics": [
+            "place value",
+            "rounding",
+            "nearest 10",
+            "nearest 100",
+            "addition within 1000",
+            "subtraction within 1000",
+            "mental math",
+            "base ten"
+          ]
+        },
+        {
+          "code": "SSC-G3-MATH-U02",
+          "title": "Unit 2: Operations — Multiplication and Division",
+          "credits": 5,
+          "description": "Meaning of multiplication; facts 2–10; division as equal groups and arrays.",
+          "topics": [
+            "multiplication",
+            "meaning of multiplication",
+            "multiplication facts",
+            "division",
+            "equal groups",
+            "arrays",
+            "times tables"
+          ]
+        },
+        {
+          "code": "SSC-G3-MATH-U03",
+          "title": "Unit 3: Fractions",
+          "credits": 4,
+          "description": "Fractions as parts of a whole; number line; comparing and equivalent fractions.",
+          "topics": [
+            "fractions",
+            "parts of a whole",
+            "number line",
+            "equivalent fractions",
+            "comparing fractions",
+            "fraction equivalence"
+          ]
+        },
+        {
+          "code": "SSC-G3-MATH-U04",
+          "title": "Unit 4: Geometry",
+          "credits": 3,
+          "description": "Attributes of 2D shapes; perimeter and area; partitioning shapes into equal parts.",
+          "topics": [
+            "geometry",
+            "2d shapes",
+            "perimeter",
+            "area",
+            "partitioning shapes",
+            "quadrilateral"
+          ]
+        },
+        {
+          "code": "SSC-G3-MATH-U05",
+          "title": "Unit 5: Measurement and Data",
+          "credits": 4,
+          "description": "Time to the minute; length in cm/m; mass and volume; bar graphs and pictographs.",
+          "topics": [
+            "telling time",
+            "measurement",
+            "centimeters",
+            "meters",
+            "mass",
+            "volume",
+            "bar graph",
+            "pictograph",
+            "data"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g7-math",
+      "name": "Grade 7 Mathematics",
+      "theme": "Core school course (c0000000-…010) — algebra, geometry, statistics",
+      "modules": [
+        {
+          "code": "SSC-G7-MATH-NUM",
+          "title": "Rational Numbers & Proportional Reasoning",
+          "credits": 4,
+          "description": "Integers, rational numbers, ratios, rates, and proportional relationships.",
+          "topics": [
+            "integers",
+            "rational numbers",
+            "ratios",
+            "unit rate",
+            "proportions",
+            "proportional reasoning"
+          ]
+        },
+        {
+          "code": "SSC-G7-MATH-ALG",
+          "title": "Expressions & Equations",
+          "credits": 4,
+          "description": "Simplifying expressions, solving one- and two-step equations, inequalities.",
+          "topics": [
+            "expressions",
+            "equations",
+            "two-step equations",
+            "inequalities",
+            "variables",
+            "algebra"
+          ]
+        },
+        {
+          "code": "SSC-G7-MATH-GEO",
+          "title": "Geometry — Angles, Triangles & Scale Drawings",
+          "credits": 3,
+          "description": "Angle relationships, triangle conditions, scale drawings, and area/volume applications.",
+          "topics": [
+            "angles",
+            "triangles",
+            "scale drawings",
+            "circumference",
+            "area of circles",
+            "surface area",
+            "volume"
+          ]
+        },
+        {
+          "code": "SSC-G7-MATH-STAT",
+          "title": "Statistics & Probability",
+          "credits": 3,
+          "description": "Sampling, measures of center/variability, and basic probability models.",
+          "topics": [
+            "statistics",
+            "probability",
+            "sampling",
+            "mean",
+            "median",
+            "range",
+            "dot plot",
+            "box plot"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "g7-sci",
+      "name": "Grade 7 Science",
+      "theme": "Core school course (c0000000-…011) — biology, chemistry basics, physics",
+      "modules": [
+        {
+          "code": "SSC-G7-SCI-BIO",
+          "title": "Living Systems & Cells",
+          "credits": 3,
+          "description": "Cell structure, organization of living systems, and basic life processes.",
+          "topics": [
+            "cells",
+            "cell membrane",
+            "photosynthesis",
+            "organism",
+            "ecosystem",
+            "living systems"
+          ]
+        },
+        {
+          "code": "SSC-G7-SCI-CHEM",
+          "title": "Matter & Chemical Changes",
+          "credits": 3,
+          "description": "States of matter, mixtures, and introductory chemical change vs physical change.",
+          "topics": [
+            "matter",
+            "states of matter",
+            "mixture",
+            "solution",
+            "chemical change",
+            "physical change",
+            "atoms"
+          ]
+        },
+        {
+          "code": "SSC-G7-SCI-PHY",
+          "title": "Forces, Motion & Energy",
+          "credits": 3,
+          "description": "Forces, simple machines, kinetic/potential energy, and heat transfer basics.",
+          "topics": [
+            "force",
+            "motion",
+            "newton",
+            "energy",
+            "kinetic energy",
+            "potential energy",
+            "simple machines"
+          ]
+        }
+      ]
+    }
+  ],
+  "pathways": [
+    {
+      "id": "g3-ccss",
+      "name": "Grade 3 CCSS Math track",
+      "startsAfter": "Enrollment in Grade 3 Mathematics",
+      "focus": "Numbers & operations → multiplication/division → fractions → geometry → measurement & data."
+    },
+    {
+      "id": "g7-core",
+      "name": "Grade 7 core academic track",
+      "startsAfter": "Grade 7 placement",
+      "focus": "Mathematics (algebra/geometry/stats) with optional Science co-enrollment."
+    }
+  ],
+  "requirements": [
+    "Stay enrolled in at least one active teaching section.",
+    "Complete unit assessments before advancing when sequential gating is enabled.",
+    "Maintain good academic standing; at-risk learners may receive reteach / practice assignments from instructors."
+  ]
+}

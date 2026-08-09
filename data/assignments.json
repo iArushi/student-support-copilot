@@ -1,0 +1,102 @@
+{
+  "assignments": [
+    {
+      "id": "asg-math7-num-1",
+      "moduleCode": "SSC-G7-MATH-NUM",
+      "moduleTitle": "Rational Numbers & Proportional Reasoning",
+      "title": "Unit rate & proportions worksheet",
+      "dueAt": "2026-08-14T23:59:00+05:30",
+      "type": "homework",
+      "notes": "Submit via LMS Assignments. Demo late policy: −10% per day.",
+      "submissions": {
+        "stu-priya": { "status": "submitted", "submittedAt": "2026-08-12T18:20:00+05:30", "scorePercent": 92 },
+        "stu-arjun": { "status": "submitted", "submittedAt": "2026-08-13T21:05:00+05:30", "scorePercent": 88 },
+        "stu-neha": { "status": "not_assigned", "submittedAt": null, "scorePercent": null }
+      }
+    },
+    {
+      "id": "asg-math7-alg-quiz",
+      "moduleCode": "SSC-G7-MATH-ALG",
+      "moduleTitle": "Expressions & Equations",
+      "title": "Two-step equations quiz",
+      "dueAt": "2026-08-18T17:00:00+05:30",
+      "type": "quiz",
+      "notes": "Timed 40 minutes. Linked to Grade 7 Mathematics assessment pattern (demo quiz weight ~40%).",
+      "submissions": {
+        "stu-priya": { "status": "submitted", "submittedAt": "2026-08-17T16:40:00+05:30", "scorePercent": 85 },
+        "stu-arjun": { "status": "not_started", "submittedAt": null, "scorePercent": null },
+        "stu-neha": { "status": "not_assigned", "submittedAt": null, "scorePercent": null }
+      }
+    },
+    {
+      "id": "asg-math7-geo-1",
+      "moduleCode": "SSC-G7-MATH-GEO",
+      "moduleTitle": "Geometry — Angles, Triangles & Scale Drawings",
+      "title": "Scale drawings lab",
+      "dueAt": "2026-08-21T23:59:00+05:30",
+      "type": "lab",
+      "notes": "Upload PDF or photo of work to the course dropbox.",
+      "submissions": {
+        "stu-priya": { "status": "not_started", "submittedAt": null, "scorePercent": null },
+        "stu-arjun": { "status": "not_started", "submittedAt": null, "scorePercent": null },
+        "stu-neha": { "status": "not_assigned", "submittedAt": null, "scorePercent": null }
+      }
+    },
+    {
+      "id": "asg-math7-stat-1",
+      "moduleCode": "SSC-G7-MATH-STAT",
+      "moduleTitle": "Statistics & Probability",
+      "title": "Sampling & mean absolute deviation set",
+      "dueAt": "2026-08-25T23:59:00+05:30",
+      "type": "homework",
+      "notes": "Show calculations; partial credit for reasoning.",
+      "submissions": {
+        "stu-priya": { "status": "not_started", "submittedAt": null, "scorePercent": null },
+        "stu-arjun": { "status": "not_started", "submittedAt": null, "scorePercent": null },
+        "stu-neha": { "status": "not_started", "submittedAt": null, "scorePercent": null }
+      }
+    },
+    {
+      "id": "asg-sci7-bio-1",
+      "moduleCode": "SSC-G7-SCI-BIO",
+      "moduleTitle": "Living Systems & Cells",
+      "title": "Cell organelle labeled diagram",
+      "dueAt": "2026-08-16T23:59:00+05:30",
+      "type": "project",
+      "notes": "Use Course Files → Week 2 diagram template.",
+      "submissions": {
+        "stu-priya": { "status": "submitted", "submittedAt": "2026-08-15T20:10:00+05:30", "scorePercent": 90 },
+        "stu-arjun": { "status": "not_assigned", "submittedAt": null, "scorePercent": null },
+        "stu-neha": { "status": "submitted", "submittedAt": "2026-08-14T19:00:00+05:30", "scorePercent": 87 }
+      }
+    },
+    {
+      "id": "asg-sci7-chem-1",
+      "moduleCode": "SSC-G7-SCI-CHEM",
+      "moduleTitle": "Matter & Chemical Changes",
+      "title": "Physical vs chemical change exit ticket",
+      "dueAt": "2026-08-20T15:00:00+05:30",
+      "type": "quiz",
+      "notes": "Formative exit-ticket knowledge check.",
+      "submissions": {
+        "stu-priya": { "status": "not_assigned", "submittedAt": null, "scorePercent": null },
+        "stu-arjun": { "status": "not_assigned", "submittedAt": null, "scorePercent": null },
+        "stu-neha": { "status": "not_started", "submittedAt": null, "scorePercent": null }
+      }
+    },
+    {
+      "id": "asg-g3m-u3-1",
+      "moduleCode": "SSC-G3-MATH-U03",
+      "moduleTitle": "Unit 3: Fractions",
+      "title": "Equivalent fractions practice (Grade 3)",
+      "dueAt": "2026-08-19T23:59:00+05:30",
+      "type": "homework",
+      "notes": "Aligned to misconception demo theme: fraction equivalence (demo-mc-1).",
+      "submissions": {
+        "stu-priya": { "status": "not_assigned", "submittedAt": null, "scorePercent": null },
+        "stu-arjun": { "status": "not_assigned", "submittedAt": null, "scorePercent": null },
+        "stu-neha": { "status": "not_assigned", "submittedAt": null, "scorePercent": null }
+      }
+    }
+  ]
+}
