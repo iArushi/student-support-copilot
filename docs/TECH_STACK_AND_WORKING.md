@@ -5,14 +5,14 @@
 | Layer | Technology | Purpose |
 |---|---|---|
 | Application | Next.js App Router | Hosts the frontend and server API in one deployable application |
-| Language | TypeScript | Provides typed UI, API, session, intent, and data contracts |
+| Language | TypeScript | Helps catch code and data mistakes before deployment |
 | Frontend | React and Material UI | Builds the responsive login, objective tiles, chat thread, and composer |
 | API | Next.js Route Handlers | Keeps authentication, policy, retrieval, and model calls server-side |
 | Authentication | HTTP-only demo cookie | Restricts the prototype to signed-in demo students |
-| Language understanding | Local normalization with optional OpenAI | Handles common variations while retaining deterministic fallback |
-| Routing | Regex and policy rules | Classifies supported intents and enforces the no-tutoring boundary |
+| Language understanding | Local text cleanup with optional OpenAI | Handles common wording, slang, and typos with a built-in backup |
+| Question handling | Text and safety rules | Finds the question type and blocks tutoring requests |
 | Retrieval | Local JSON | Simulates curriculum, student, assignment, grade, FAQ, and mentor records |
-| Response generation | Deterministic formatter with optional OpenAI | Produces grounded responses without making the model a source of truth |
+| Response writing | Built-in formatter with optional OpenAI | Uses retrieved facts and does not treat AI as the source of truth |
 | Evaluation | TypeScript evaluation script | Tests functionality, privacy, language variation, and policy behavior |
 | Deployment | Vercel | Builds and hosts the Next.js application and server routes |
 
@@ -22,7 +22,7 @@
 src/
 ├── app/
 │   ├── api/auth/          Demo login, logout, and session routes
-│   ├── api/chat/          Authenticated chat endpoint
+│   ├── api/chat/          Chat endpoint that requires login
 │   └── page.tsx           Application entry page
 ├── components/
 │   ├── AppShell.tsx       Theme and session state
@@ -30,13 +30,13 @@ src/
 │   └── ChatApp.tsx        Objective tiles and chat interface
 └── lib/
     ├── auth.ts            Session lookup
-    ├── understand.ts      Message normalization and optional LLM hints
-    ├── intent.ts          Deterministic intent classification
-    ├── retrieve.ts        Student-scoped data retrieval
-    ├── prompts.ts         Grounded response instructions and fallback formatting
-    └── chat.ts            Main orchestration pipeline
+    ├── understand.ts      Cleans the message and gets optional AI hints
+    ├── intent.ts          Finds the question type using rules
+    ├── retrieve.ts        Gets only the signed-in student's data
+    ├── prompts.ts         Response instructions and backup wording
+    └── chat.ts            Connects all chat steps
 
-data/                     Synthetic LMS records
+data/                     Made-up LMS records for the demo
 scripts/evaluation.mts    Automated behavior evaluation
 ```
 
@@ -48,9 +48,9 @@ flowchart LR
     UI --> API[POST /api/chat]
     API --> Auth[Session check]
     Auth --> Understand[Normalize and interpret]
-    Understand --> Policy[Safety and intent routing]
-    Policy --> Retrieve[Student-scoped JSON retrieval]
-    Retrieve --> Response[Grounded response builder]
+    Understand --> Policy[Safety and question rules]
+    Policy --> Retrieve[Get matching student data]
+    Retrieve --> Response[Build answer from facts]
     Response --> UI
     Policy --> Referral[Course referral for learning questions]
     Referral --> UI
@@ -74,68 +74,67 @@ student ID with the question, which prevents users from selecting another studen
 - Get support
 - Find where a topic is taught
 
-The selected objective is sent as a routing hint. It does not override explicit intent or safety
-rules.
+The selected objective helps the system understand the question. The student's actual words and
+safety rules always take priority.
 
 ### 3. Chat API
 
 `src/app/api/chat/route.ts`:
 
-1. rejects unauthenticated requests;
-2. validates the message and optional scope;
+1. rejects requests from users who are not signed in;
+2. checks the message and selected objective;
 3. calls `handleChatMessage`;
-4. logs non-sensitive routing metadata; and
+4. logs basic technical details without the full student message; and
 5. returns only the reply and source to the frontend.
 
 ### 4. Language understanding
 
-`understand.ts` first applies local normalization for known slang, typos, fragments, and supported
-Hindi-English phrases.
+`understand.ts` first cleans up known slang, typos, short phrases, and supported Hindi-English
+phrases.
 
 When `OPENAI_API_KEY` is configured, OpenAI may return structured hints:
 
-- normalized text;
-- intent hints;
+- cleaned text;
+- possible question types;
 - course and topic hints;
 - confidence; and
 - whether clarification is needed.
 
-The application validates this JSON. Unknown intents, malformed values, and low-confidence hints are
-discarded.
+The application checks this JSON. Unknown, broken, or uncertain values are ignored.
 
-### 5. Policy and intent routing
+### 5. Safety and question handling
 
 `chat.ts` and `intent.ts` evaluate the original message before retrieval. They handle:
 
 - distress and human escalation;
 - off-topic questions;
 - vague requests;
-- multi-intent questions;
-- curriculum, assignment, grade, FAQ, and mentor intents; and
+- questions that ask for two things;
+- course, assignment, grade, common-question, and support requests; and
 - concept, definition, and homework requests.
 
 Academic questions enter the referral path and cannot request instructional generation.
 
 ### 6. Retrieval
 
-`retrieve.ts` loads only the records needed for the detected intent. It applies:
+`retrieve.ts` loads only the records needed for the question. It checks:
 
-- authenticated student filtering;
+- signed-in student filtering;
 - enrollment filtering;
 - course and topic matching;
 - assignment date and submission filters; and
 - honest unavailable states.
 
-Structured records use direct lookup because grades and deadlines require exact values. Vector
-similarity is intentionally not used for these facts.
+Grades and deadlines use direct matching because their values must be exact. The system does not use
+approximate AI search for these facts.
 
-### 7. Grounded response
+### 7. Answer based on retrieved facts
 
 `prompts.ts` converts retrieved snippets into a concise fallback response. If OpenAI is available,
 the same approved snippets may be formatted into more natural wording.
 
-The model cannot retrieve arbitrary data and is instructed not to add unsupported facts. If the
-model call fails, the deterministic response is returned.
+The model cannot search other data and must not add unsupported facts. If the model call fails, the
+built-in response is returned.
 
 ### 8. Frontend rendering
 
@@ -143,7 +142,7 @@ The API returns:
 
 ```json
 {
-  "reply": "Grounded response",
+  "reply": "Answer based on retrieved facts",
   "source": "Source category"
 }
 ```
@@ -157,7 +156,7 @@ OPENAI_API_KEY=optional-secret-key
 OPENAI_MODEL=gpt-4o-mini
 ```
 
-The application works without OpenAI by using local understanding and deterministic responses.
+The application works without OpenAI by using local rules and built-in responses.
 Secrets remain server-side and must never use the `NEXT_PUBLIC_` prefix.
 
 ## Verification
@@ -168,13 +167,12 @@ npx tsc --noEmit
 npm run build
 ```
 
-The evaluation suite covers 34 supported, privacy, fallback, language-variation, and
-academic-integrity scenarios.
+The evaluation suite covers 34 feature, privacy, fallback, language, and learning-safety scenarios.
 
 ## Prototype-to-production changes
 
-- Replace the demo cookie with signed OIDC/SSO.
-- Replace JSON files with authenticated LMS APIs.
-- Add rate limiting and production observability.
-- Redact or avoid sensitive model inputs based on the approved AI data policy.
+- Replace the demo cookie with the school's secure sign-in system.
+- Replace JSON files with secure LMS APIs.
+- Limit repeated API requests and add error and usage tracking.
+- Remove sensitive details before sending approved data to an AI provider.
 - Add instructor-owned course mappings and support-content review workflows.
