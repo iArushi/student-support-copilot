@@ -115,14 +115,17 @@ function extractModuleCode(message: string, preferredCodes: Set<string> = new Se
   const upper = message.toUpperCase();
   // Longer codes first if future catalog codes share a prefix.
   modules.sort((a, b) => b.code.length - a.code.length);
-  for (const module of modules) {
-    if (upper.includes(module.code)) return module.code;
+  for (const courseModule of modules) {
+    if (upper.includes(courseModule.code)) return courseModule.code;
   }
 
   let best: { code: string; score: number } | null = null;
-  for (const module of modules) {
+  for (const courseModule of modules) {
     let score = 0;
-    const aliases = [...(MODULE_ALIASES[module.code] ?? []), ...module.topics];
+    const aliases = [
+      ...(MODULE_ALIASES[courseModule.code] ?? []),
+      ...courseModule.topics,
+    ];
 
     for (const alias of aliases) {
       if (containsPhrase(message, alias)) {
@@ -130,12 +133,12 @@ function extractModuleCode(message: string, preferredCodes: Set<string> = new Se
       }
     }
 
-    const titleOverlap = overlapScore(message, module.title);
-    const descriptionOverlap = overlapScore(message, module.description);
+    const titleOverlap = overlapScore(message, courseModule.title);
+    const descriptionOverlap = overlapScore(message, courseModule.description);
     score += titleOverlap * 3 + descriptionOverlap;
-    if (score > 0 && preferredCodes.has(module.code)) score += 4;
+    if (score > 0 && preferredCodes.has(courseModule.code)) score += 4;
 
-    if (!best || score > best.score) best = { code: module.code, score };
+    if (!best || score > best.score) best = { code: courseModule.code, score };
   }
 
   return best && best.score >= 4 ? best.code : null;
